@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<head>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url(image.school.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        lable{
+            display: block;
+            margin-bottom:10px ;
+        }
+        div{
+            background-color: rgba(255,255, 255,0.77);
+            border-radius: 10px;
+            padding:50px;
+            width:400px;
+        }
+        input[type="text"],input[type="email"],input[type="password"] ,select,textarea{
+            width:100%;
+            padding:10px;
+            border:none;
+            border-radius: 5px;
+        }
+        input[type="submit"],input[type="reset"]{
+            background-color: rgba(255,83,18,0.746);
+            color:white;
+            padding:10px 20px;
+            border-radius:20px;
+            border:none;
+            transition: 0.5s;
+        }
+        input:focus, textarea:focus, select:focus{
+            background-color: antiquewhite;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover{
+            background-color: rgba(255,82, 9,0.837);
+            transform:scale(1.05);
+            cursor:pointer;
+        }
+        h2{
+            text-align: center;
+        }
+        a {
+  text-decoration: none; /* Remove underline */
+}
+
+img {
+  width: 30px; /* Adjust the width as needed */
+  height: 30px; /* Adjust the height as needed */
+}
+    </style>
+</head>
+<body>
+    <div>
+        <form action=" " method="post">
+            <h2>Welcome to vivekananda school alumini!</h2>
+            <lable for="name">Name</lable>
+            <input type="text" placeholder="first and last name" id="name" name="name"><br>
+            <lable for="email" >Email:</lable>
+            <input type="email" id="email" name="email">
+            <lable for="cities">Select city:</lable>
+            <select name="cities" id="cities">
+                <option value="pulivendula">pulivendula</option>
+                <option value="kadapa">kadapa</option>
+                <option value="nallapareddy palli">nalapareddy palli</option>
+                <option value="ananthapur">ananthapur</option>
+                <option value="kadiri">kadiri</option>
+            </select><br>
+            <lable for="Address">Address:</lable>
+            <textarea name="" id="Address" cols="30" rows="5" name="Addres"></textarea><br>
+            <lable for="gender">Gender</lable>
+            <input type="radio" value="male" name="gender">male
+            <input type="radio" value="female" name="gender">female
+            <input type="radio" value="others" name="gender">others
+            <br>
+            <lable for="password">password</lable>
+            <input type="password" name="password"><br>
+            <lable for="upload">Upload file:</lable>
+            <input type="file" name="file"><br><br>
+            <a href="" target="_blank">
+                <img src="instagram-logo.png" alt="Instagram">
+              </a>
+
+
+
+
+            <br><input type="reset"><br>
+            <input type="date">Date of birth:<br>
+           </form>
+    </div>
+</body>
+</html>
+<body>
+ <script>
+    function validation(){
+        let isValid = true;
+        if(document.getElementById("name").value == " "){
+            document.getElementById("errorname").innerText = "Name cannot be blank ";
+            isValid = false
+        }else{
+            document.getElementById("error name").innerText="";
+        }
+        if(document.getElementById("email").value == " "){
+            document.getElementById("erroremail").innerText = "Email cannot be left blank ";
+            isValid = false
+        }else{
+            document.getElementById("error email").innerText="";
+        }
+        if(document.getElementById("cities").value == " "){
+            document.getElementById("errorcities").innerText = "City  cannot be left blank ";
+            isValid = false
+        }else{
+            document.getElementById("error city").innerText="";
+        }
+        if(document.getElementById("address").value == " "){
+            document.getElementById("erroraddress").innerText = "Address cannot be left blank ";
+            isValid = false
+        }else{
+            document.getElementById("error address").innerText="";
+        }
+        if(document.myForm.gender.value == ""){
+            document.getElementById("errorgender").innerText = "please select gender ";
+            isValid = false
+        }else{
+            document.getElementById("error gender").innerText="";
+        }
+        if(document.getElementById("password").value == " "){
+            document.getElementById("errorpassword").innerText = "password cannot be left blank ";5
+            isValid = false
+        }else{
+            document.getElementById("error password").innerText="";
+        }
+        if(document.getElementById("file").value == " "){
+            document.getElementById("errorfile").innerText = "please browse a file ";
+            isValid = false
+        }else{
+            document.getElementById("error file").innerText="";
+        }
+        return invalid
+
+        }
+ </script>
+ </body>
